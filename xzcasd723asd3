@@ -3572,7 +3572,7 @@ task.spawn(function()
         end
 
         print("[BloxstrapRPC] {\"command\": \"SetRichPresence\", \"data\": " .. game:GetService("HttpService"):JSONEncode({
-            details = Bool and "[ Playing DOORS 👁️ ] Nexam" or "<reset>",
+            details = Bool and "[ Playing DOORS ] Nexam" or "<reset>",
             state = Bool and State or "<reset>",
             largeImage = Bool and LargeImage or { reset = true },
             smallImage = Bool and { assetId = 135488783479977, hoverText = "Nexam Hub | Doors" } or { reset = true }
