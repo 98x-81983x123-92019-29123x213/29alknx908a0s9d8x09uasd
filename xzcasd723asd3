@@ -58,7 +58,7 @@ ErrorMessageOut = game:GetService("LogService").MessageOut:Connect(function(Mess
         Library:Notify("Your Executor is too Weak to Support this! Or You loaded to soon!", 4.5)
 
         task.delay(5, function()
-
+		Library:Unload()
         end)
     end
 
