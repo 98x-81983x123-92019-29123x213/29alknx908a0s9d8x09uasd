@@ -48,19 +48,7 @@ local Library = loadstring(game:HttpGet(Repository .. "Library.lua"))()
 local ThemeManager = loadstring(game:HttpGet(Repository .. "addons/ThemeManager.lua"))()
 local SaveManager = loadstring(game:HttpGet(Repository .. "addons/SaveManager.lua"))()
 
-local ErrorMessageOut
-ErrorMessageOut = game:GetService("LogService").MessageOut:Connect(function(Message, Type)
 
-    if Type == Enum.MessageType.MessageError and not string.find(Message, "attempt to index nil with 'Value'") then
-        ErrorMessageOut:Disconnect()
-
-        setclipboard("Executor: " .. identifyexecutor() .. "\n\n" .. tostring(Message))
-
-        task.delay(5, function()
-        end)
-    end
-
-end)
 local LocalPlayer = game.Players.LocalPlayer
 
 local Options = Library.Options
