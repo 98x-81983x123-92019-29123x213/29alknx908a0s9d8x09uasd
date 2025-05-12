@@ -1,54 +1,68 @@
- --[[
-                      ████                 █████
-                  ████████████          ███████████
-                ███████      ██        ███    ██████
-               █████                             ████
-              ████                                 ███
-              ██      ░░░░░░░░░░░░░░░░░░░░░░░░      ██
-             ██   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░   ██
-               ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-             ░░░▒▒▒░░▒░░░░░░░░░░░░░░░░░░░░░░░░░░░▒░░░░░
-           ░▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒░░░
-         ▒▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒░░░
-        ▒▒░░░░░░░░░░░░░░░░░░░▒░░░░░░▒░░░░░░░▓██▒░░░░░░░░▒░░░
-       ▒░░░░░░░░░░▒███████▒░░░▒░░░░▒░░░░░███████▓▓░░░░░░░▒░░░
-     ▒▒░▒░░░░░░░░███████▓▓▓▓░░▒░░░░░░░░▓███████▓▓▓█░░░░░░▒░░░░
-     ▒░▒▒░░░░░░░▓████████▓▓█░░▒░░░░░░░░████████████░░░░░░▒░░░░
-    ▒░▒▒▒░░░░░░░▓███████████░░▒░░░░░░░░▒██████████░░░░░░░▒░░░░░
-   ▒▒░▒▒▒░░░░░░░░██████████░░░▒░░░░▒░░░░░███████▒░░░░░░░▒▒░░░░░
-   ▒▒▒▒▒▒▒░░░░░░░░░██████░░░░▒▒░░░░▒▒░░░░░░░░░░░░░░░░░░▒▒░░░░░░
-   ▒▒▒▒▒▒▒▒░░░░░░░░░░░░░░░░░▒▒░░░░░░▒▒░░░░░░░░░░░░░░░░▒▒░░░░░░░
-   ▒▒▒▒▒▒▒▒▒▓░░░░░░░░░░░░░▒▒░░░░░░░░░░▒▒▒░░░░░░░░░░▒▒▒░░░░░░░░▒
-   ▒▒░▒▒▒▒▒▒▒▒▒▓▒▒▒▒▒▒▒▓▒▒▒░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▓█▓░░░░░░░░▒
-   ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░▒▒░░░░▒░░░░░░░░░░░█▓███░░░░░▒▒▒
-    ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒▒▒▒░░░▒██▒▒░░░░░░▒▒
-    ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░▒██▓▒▒▒░▒░░░░▒▒▒
-     ▒▒▒▒▒▒▒▒▒▒▒██▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓██▓▒▒▒▒▒▒▒░░░░▒▒▒
-      ▒▒▒▒▒▒▒▒▒▒▒▒▒▓███▓▓▒▒▒▒▒▒▒▒▒▒▒▒▓████▒▒▒▒▒▒▒▒▒░▒▒▒░░▒▒▒
-       ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓███████████▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒▒▒▒▒▒
-        ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-          ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-           ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-              ▒▒▒▒▒▒░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-                 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-                    ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-                           ▒▒▒▒▒▒▒▒▒▒▒
- __          __     _____ _   _    _______ _    _ ______     _____ _    _       _______ 
- \ \        / /    |_   _| \ | |  |__   __| |  | |  ____|   / ____| |  | |   /\|__   __|
-  \ \  /\  / /__     | | |  \| |     | |  | |__| | |__     | |    | |__| |  /  \  | |
-   \ \/  \/ / __|    | | | . ` |     | |  |  __  |  __|    | |    |  __  | / /\ \ | |
-    \  /\  /\__ \   _| |_| |\  |     | |  | |  | | |____   | |____| |  | |/ ____ \| |
-     \/  \/ |___/  |_____|_| \_|     |_|  |_|  |_|______|   \_____|_|  |_/_/    \_\_|
-]]
---Repository
-local Loadtime = tick()
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
+
+-- Instances: 44 | Scripts: 7 | Modules: 0 | Tags: 0
+local allowedPlaces = {
+    [6839171747] = true -- Your actual in-game PlaceId
+}
+
+local doorsLobbyId = 6516141723 -- DOORS lobby PlaceId
+
+-- SendNotification helper
+local function notify(title, text, duration)
+    pcall(function()
+        game.StarterGui:SetCore("SendNotification", {
+            Title = title,
+            Text = text,
+            Duration = duration or 5
+        })
+    end)
+end
+
+if game.PlaceId == doorsLobbyId then
+    notify("Nexam Hub", "You're in the DOORS lobby. Join a match to continue.")
+    return
+end
+
+if not allowedPlaces[game.PlaceId] then
+    notify("Nexam Hub", "Join DOORS to use this script.")
+    return
+end
+
+-- ✅ UI loading continues here (only if in allowed game, not lobby)
+-- Insert your UI script here
+
+
+
+local function loadUI()
+          local Loadtime = tick()
 local Repository = "https://raw.githubusercontent.com/geoduude/Obsidian/main/"
 
 local Library = loadstring(game:HttpGet(Repository .. "Library.lua"))()
 local ThemeManager = loadstring(game:HttpGet(Repository .. "addons/ThemeManager.lua"))()
 local SaveManager = loadstring(game:HttpGet(Repository .. "addons/SaveManager.lua"))()
 
+local ErrorMessageOut
+ErrorMessageOut = game:GetService("LogService").MessageOut:Connect(function(Message, Type)
 
+    if Type == Enum.MessageType.MessageError and not string.find(Message, "attempt to index nil with 'Value'") then
+        ErrorMessageOut:Disconnect()
+
+        setclipboard("Executor: " .. identifyexecutor() .. "\n\n" .. tostring(Message))
+        Library:Notify("Your Executor is too Weak to Support this! Or You loaded to soon!", 4.5)
+
+        task.delay(5, function()
+            Library:Unload()
+        end)
+    end
+
+end)
 local LocalPlayer = game.Players.LocalPlayer
 
 local Options = Library.Options
@@ -67,7 +81,7 @@ local Tabs = { General = Window:AddTab("Main"), Exploit = Window:AddTab("Modific
 local Credita = Tabs.Credits:AddLeftGroupbox("Information")
 
 Credita:AddLabel("Created by Nexam Hub")
-Credita:AddLabel("Credits to Mspaint and LOLhax")
+Credita:AddLabel("Credits to LOLhax")
 
 Credita:AddDivider()
 
@@ -85,45 +99,44 @@ local MiscMovement = Tabs.General:AddLeftGroupbox("Movement")
 MiscMovement:AddToggle("MM_Fly", { Text = "Fly", Default = false }):AddKeyPicker("MM_Fly_K", { Default = "F", SyncToggleState = false, Mode = "Toggle", Text = "Fly", NoUI = false })
 MiscMovement:AddSlider("MM_Fly_S", { Text = "Flying Speed", Default = 20, Min = 10, Max = 100, Rounding = 0, Compact = true, Tooltip = "Controls the fly speed." })
 MiscMovement:AddDivider()
-MiscMovement:AddToggle("MM_Walkspeed", { Text = "Enable Speed Modifier", Default = false, Tooltip = "Sets player speed according to value set." })
-MiscMovement:AddSlider("MM_Walkspeed_S", { Text = "Walkspeed Amount", Default = 20, Min = 10, Max = 50, Rounding = 0, Compact = true, Tooltip = "Controls the player walkspeed amount." })
+MiscMovement:AddToggle("MM_Walkspeed", { Text = "Enable Speedhack", Default = false, Tooltip = "Sets player speed according to value set." })
+MiscMovement:AddSlider("MM_Walkspeed_S", { Text = "Walkspeed", Default = 20, Min = 10, Max = 50, Rounding = 0, Compact = true, Tooltip = "Controls the player walkspeed amount." })
 MiscMovement:AddSlider("MM_Walkspeed_Boost", { Text = "Ladder Speed Boost", Default = 0, Min = 0, Max = 50, Rounding = 0, Compact = true, Tooltip = "Speed boost for climbing up ladders. High values may become unstable." })
 MiscMovement:AddDivider()
 MiscMovement:AddToggle("MM_NoAcceleration", { Text = "No Acceleration", Default = false, Tooltip = "Removes acceleration while moving or switching direction." })
 
 local ExploitBypass = Tabs.General:AddRightGroupbox("Bypass")
-ExploitBypass:AddToggle("EB_CrouchSpoof", { Text = "Crouch Spoof", Default = false, Tooltip = "Spoofs crouching, or in other words the game will think you're crouching. Useful for figure rooms." })
-ExploitBypass:AddToggle("EB_SpeedBypass", { Text = "Speed Bypass", Default = false, Tooltip = "Attempts to mitigate the speed anticheat." })
-ExploitBypass:AddToggle("EB_ACManipulate", { Text = "Anti-Cheat Manipulation", Default = false, Tooltip = "Will teleport to the opposite direction the camera is facing to manipulate the anticheat into rubberbanding you the opposite way." }):AddKeyPicker("EB_ACManipulate_K", { Default = "T", SyncToggleState = false, Mode = "Hold", Text = "Anti-Cheat Manipulate", NoUI = false, })
+ExploitBypass:AddToggle("EB_CrouchSpoof", { Text = "Fake Crouching", Default = false, Tooltip = "Tricks the game into thinking you're crouching (Useful for figure)" })
+ExploitBypass:AddToggle("EB_SpeedBypass", { Text = "Speed Bypass", Default = false, Tooltip = "Removes the speed anticheat" })
+ExploitBypass:AddToggle("EB_ACManipulate", { Text = "Anti Cheat Manipulation", Default = false}):AddKeyPicker("EB_ACManipulate_K", { Default = "T", SyncToggleState = false, Mode = "Hold", Text = "Anti-Cheat Manipulate", NoUI = false, })
 
 
 local GeneralAutomation = Tabs.General:AddLeftGroupbox("Automatics")
-GeneralAutomation:AddToggle("GA_AutoInteract", { Text = "Automatic Interact", Default = false, }):AddKeyPicker("GA_AutoInteract_K", { Default = "R", SyncToggleState = false, Mode = "Hold", Text = "Auto Interact", NoUI = false, Tooltip = "Will activate any nearby interactables when key is active." })
+GeneralAutomation:AddToggle("GA_AutoInteract", { Text = "Auto Interact", Default = false, }):AddKeyPicker("GA_AutoInteract_K", { Default = "R", SyncToggleState = false, Mode = "Hold", Text = "Auto Interact", NoUI = false, Tooltip = "Will toggle any nearby interactables" })
 GeneralAutomation:AddDropdown("GA_AutoInteract_Options", { Values = { "Use Lockpick ( Doors )", "Use Lockpick ( Other )", "Ignore Light Sources", "Ignore Can-Die" }, Default = 0, Multi = true, Text = "Automatic Interact Options" })
 GeneralAutomation:AddSlider("GA_AutoInteract_Range", { Text = "Range Multiplier", Default = 1, Min = 1, Max = 2, Rounding = 1, Compact = true })
 GeneralAutomation:AddDivider()
-GeneralAutomation:AddToggle("GA_EatCandies", { Text = "Automatic Candy Use", Default = false, }):AddKeyPicker("GA_EatCandies_K", { Default = "V", SyncToggleState = false, Mode = "Hold", Text = "Auto Use Candy", NoUI = false, Tooltip = "Will eat all candy in the player inventory when key is active." })
-GeneralAutomation:AddToggle("GA_AutoPowerup", { Text = "Automatic Powerup Pickup", Default = false, Tooltip = "Will immediately pick up any power ups on the map if available." })
-GeneralAutomation:AddToggle("GA_AutoHide", { Text = "Automatic Hide", Default = false, Tooltip = "Will automatically predict entities and hide in the nearest available spot when enabled." })
+
+GeneralAutomation:AddToggle("GA_AutoPowerup", { Text = "Auto Powerup Pickup", Default = false, Tooltip = "Will pick up power ups on the map if any are available" })
+GeneralAutomation:AddToggle("GA_AutoHide", { Text = "Auto Hide", Default = false, Tooltip = "Will predict entities and will hide in the nearest available hiding spot" })
 GeneralAutomation:AddToggle("GA_AutoHide_VisCheck", { Text = "Prediction Visible Check", Default = false, })
 GeneralAutomation:AddSlider("GA_AutoHide_PredictionTime", { Text = "Prediction Time", Default = 0.5, Min = 0.1, Max = 1.5, Rounding = 2, Compact = true, Suffix = "s" })
 GeneralAutomation:AddSlider("GA_AutoHide_PredictionDistanceMultiplier", { Text = "Distance Multiplier", Default = 1, Min = 0.8, Max = 1.5, Rounding = 1, Compact = true, Suffix = "x" })
 GeneralAutomation:AddDivider()
-GeneralAutomation:AddToggle("GA_MinecartInteract", { Text = "Minecart Interact Spam", Default = false, Tooltip = "Automatically spam interact with nearby minecarts when key is active." }):AddKeyPicker("GA_MinecartInteract_K", { Default = "H", SyncToggleState = false, Mode = "Hold", Text = "Minecart Interact Spam", NoUI = false, })
-GeneralAutomation:AddToggle("GA_AnchorAutoSolve", { Text = "Automatic Anchor Solve", Default = false, Tooltip = "Automatically solves any anchor when close enough, if it's the designated one." })
-GeneralAutomation:AddToggle("GA_BreakerAutoSolve", { Text = "Automatic Breaker Solve", Default = false, Tooltip = "Automatically solves the hotel door 100 breaker minigame." })
+GeneralAutomation:AddToggle("GA_AnchorAutoSolve", { Text = "Auto Anchor Solve", Default = false, Tooltip = "Solves any anchor when close enough" })
+GeneralAutomation:AddToggle("GA_BreakerAutoSolve", { Text = "Auto Breaker Solve", Default = false, Tooltip = "Solves the hotel door 100 breaker minigame" })
 GeneralAutomation:AddDivider()
-GeneralAutomation:AddToggle("GA_AutoPadlockSolve", { Text = "Automatic Library Padlock", Default = false, Tooltip = "Automatically unlocks padlock with the code when near enough to the set distance." })
-GeneralAutomation:AddSlider("GA_AutoPadlockSolve_Distance", { Text = "Automatic Padlock Distance", Default = 25, Min = 10, Max = 50, Rounding = 0, Compact = true, Tooltip = "Minimum distance for auto padlock solver to input the correct code."})
+GeneralAutomation:AddToggle("GA_AutoPadlockSolve", { Text = "Auto Padlock", Default = false, Tooltip = "Unlocks padlock with the code when near enough to the set distance" })
+GeneralAutomation:AddSlider("GA_AutoPadlockSolve_Distance", { Text = "Auto Padlock Distance", Default = 25, Min = 10, Max = 50, Rounding = 0, Compact = true, Tooltip = "Set distance for auto padlock solver"})
 
 local GeneralNotifying = Tabs.General:AddRightGroupbox("Notifications")
-GeneralNotifying:AddToggle("GN_Enabled", { Text = "Enabled", Default = false, Tooltip = "Enable/Disable Popup Notifications." })
-GeneralNotifying:AddToggle("GN_NotificationSound", { Text = "Play Sound", Default = false, Tooltip = "Plays A sound when an notification occurs." })
+GeneralNotifying:AddToggle("GN_Enabled", { Text = "Enabled", Default = false, Tooltip = "Enable or Disable Notifications." })
+GeneralNotifying:AddToggle("GN_NotificationSound", { Text = "Play Sound", Default = false, Tooltip = "Plays a sound when a notification occurs to bring your attention" })
 GeneralNotifying:AddSlider("GN_NotificationSound_Volume", { Text = "Sound Volume", Default = 2, Min = 1, Max = 10, Rounding = 1, Compact = true })
 GeneralNotifying:AddDivider()
-GeneralNotifying:AddToggle("GN_AnchorCode", { Text = "Anchor Code", Default = false, Tooltip = "Will notify upon any anchor code being confirmed." })
-GeneralNotifying:AddToggle("GN_PadlockCode", { Text = "Library Padlock Code", Default = false, Tooltip = "Will notify upon padlock code being confirmed." })
-GeneralNotifying:AddToggle("GN_Entities", { Text = "Entity Notifying", Default = false, Tooltip = "Will notify upon a selected entity spawning." })
+GeneralNotifying:AddToggle("GN_AnchorCode", { Text = "Anchor Code", Default = false, Tooltip = "Sends a notification upon any anchor code being confirmed" })
+GeneralNotifying:AddToggle("GN_PadlockCode", { Text = "Library Padlock Code", Default = false, Tooltip = "Sends a notification upon padlock code being confirmed" })
+GeneralNotifying:AddToggle("GN_Entities", { Text = "Entity Notifying", Default = false, Tooltip = "Sends a notification when an entity spawns" })
 GeneralNotifying:AddDropdown("GN_Entities_Options", { Values = { "Rush", "Custom Rush", "Blitz", "Ambush", "Eyes", "Lookman", "Halt", "Screech", "Gloombat Swarm", "Dread", "A-60", "A-120" }, Default = 0, Multi = true, Text = "Entity List", Tooltip = "Entity whitelist to notify for." })
 GeneralNotifying:AddDivider()
 GeneralNotifying:AddDropdown("GN_NotificationAlignment", { Values = { "Left", "Center", "Right" }, Default = 2, Multi = false, Text = "Horizontal Alignment" })
@@ -133,26 +146,23 @@ GeneralNotifying:AddSlider("GN_NotificationDPISize", { Text = "Size Multiplier",
 
 
 local ExploitSelf = Tabs.Exploit:AddLeftGroupbox("You")
-ExploitSelf:AddToggle("ES_AlwaysJump", { Text = "Always Enable Jumping", Default = false, Tooltip = "Enables jumping at all times." })
+ExploitSelf:AddToggle("ES_AlwaysJump", { Text = "Always Enable Jumping", Default = false, Tooltip = "Enables jumping at all times" })
 ExploitSelf:AddDivider()
-ExploitSelf:AddToggle("ES_AntiGloombat", { Text = "Anti-Gloombat Egg", Default = false, Tooltip = "Disallows touching on any Gloombat egg hitbox." })
-ExploitSelf:AddToggle("ES_AntiGiggle", { Text = "Anti-Giggle", Default = false, Tooltip = "Disallows touching on the entity 'Giggle' hitbox." })
-ExploitSelf:AddToggle("ES_AntiSnare", { Text = "Anti-Snare", Default = false, Tooltip = "Disallows touching on the entity 'Snare'." })
-ExploitSelf:AddToggle("ES_AntiDupe", { Text = "Anti-Dupe", Default = false, Tooltip = "Disallows touching on any entity 'Dupe' fake doors." })
-ExploitSelf:AddToggle("ES_AntiEyes", { Text = "Anti-Eyes", Default = false, Tooltip = "Forces character to look down from the entity 'Eyes'." })
-ExploitSelf:AddToggle("ES_AntiLookman", { Text = "Anti-Lookman", Default = false, Tooltip = "Forces character to look down from the entity 'Lookman'." })
-ExploitSelf:AddToggle("ES_AntiChanedlier", { Text = "Anti-Chandelier", Default = false, Tooltip = "Disallows touching on any fallen chandeliers during the seek chase." })
-ExploitSelf:AddToggle("ES_AntiSeekArms", { Text = "Anti-Seek Arms", Default = false, Tooltip = "Disallows touching on any seek arms during the seek chase." })
+ExploitSelf:AddToggle("ES_AntiGloombat", { Text = "Anti-Gloombat Egg", Default = false, Tooltip = "Disallows touching on any Gloombat egg" })
+ExploitSelf:AddToggle("ES_AntiGiggle", { Text = "Anti-Giggle", Default = false, Tooltip = "Disallows touching on the entity 'Giggle'" })
+ExploitSelf:AddToggle("ES_AntiSnare", { Text = "Anti-Snare", Default = false, Tooltip = "Disallows touching on the entity 'Snare'" })
+ExploitSelf:AddToggle("ES_AntiDupe", { Text = "Anti-Dupe", Default = false, Tooltip = "Disallows touching on any entity 'Dupe' fake doors" })
+ExploitSelf:AddToggle("ES_AntiEyes", { Text = "Anti-Eyes", Default = false, Tooltip = "Forces character to look down from the entity 'Eyes'" })
+ExploitSelf:AddToggle("ES_AntiLookman", { Text = "Anti-Lookman", Default = false, Tooltip = "Forces character to look down from the entity 'Lookman'" })
+ExploitSelf:AddToggle("ES_AntiChanedlier", { Text = "Anti-Chandelier", Default = false, Tooltip = "Disallows touching on any fallen chandeliers during the seek chase" })
+ExploitSelf:AddToggle("ES_AntiSeekArms", { Text = "Anti-Seek Arms", Default = false, Tooltip = "Disallows touching on any seek arms during the seek chase" })
 
 
 local ExploitRemovals = Tabs.Exploit:AddRightGroupbox("Entity Removals")
 ExploitRemovals:AddToggle("ER_NoScreech", { Text = "No Screech", Default = false, Tooltip = "Completely disables the entity 'Screech'." })
 ExploitRemovals:AddToggle("ER_NoA90", { Text = "No A-90", Default = false, Tooltip = "Completely disables the entity 'A-90'." })
 ExploitRemovals:AddToggle("ER_NoShade", { Text = "No Halt", Default = false, Tooltip = "Completely disables the entity 'Halt'." })
-ExploitRemovals:AddDivider()
-ExploitRemovals:AddToggle("ER_NoA90Damage", { Text = "No A-90 Damage", Default = false, Tooltip = "Completely disables entity 'A-90' damaging you." })
-ExploitRemovals:AddToggle("ER_NoScreechDamage", { Text = "No Screech Damage", Default = false, Tooltip = "Completely disables entity 'Screech' damaging you." })
-ExploitRemovals:AddToggle("ER_NoShadeDamage", { Text = "No Halt Damage", Default = false, Tooltip = "Completely disables entity 'Halt' damaging you." })
+
 
 local ESPEntities = Tabs.Visuals:AddLeftGroupbox("Entities")
 ESPEntities:AddToggle("ESPE_Enabled", { Text = "Enabled", Default = false })
@@ -242,16 +252,16 @@ ESPSettings:AddDivider()
 ESPSettings:AddSlider("ESPS_FadeTime", { Text = "Fade In / Out Time", Default = 0.5, Min = 0, Max = 2, Rounding = 2, Compact = true, Suffix = "s" })
 
 local VisualsView = Tabs.Misc:AddLeftGroupbox("View")
-VisualsView:AddSlider("VV_FieldOfView", { Text = "Field of View", Default = 0, Min = 0, Max = 120, Rounding = 0, Compact = true, Tooltip = "Changes camera field of view." })
+VisualsView:AddSlider("VV_FieldOfView", { Text = "Field of View", Default = 0, Min = 0, Max = 120, Rounding = 0, Compact = true, Tooltip = "Changes camera field of view" })
 VisualsView:AddToggle("VV_TransparentLocker", { Text = "Transparent Closets", Default = false, Tooltip = "Makes any lockers you hide into transparent." })
-VisualsView:AddToggle("VV_NoCamShake", { Text = "No Camera Shake", Default = false, Tooltip = "Removes any camera shaking that will occur from entities or other things." })
+VisualsView:AddToggle("VV_NoCamShake", { Text = "No Camera Shake", Default = false, Tooltip = "Removes any camera shaking that will occur from entities or other things" })
 VisualsView:AddToggle("VV_NoLookBob", { Text = "No Look Bobbing", Default = false, Tooltip = "Removes any look bobbing that will occur when walking." })
 VisualsView:AddDivider()
-VisualsView:AddToggle("VV_Thirdperson", { Text = "Thirdperson", Default = false, Tooltip = "Changes camera visibility to view local character from the third person." }):AddKeyPicker("VV_Thirdperson_K", { Default = "V", SyncToggleState = false, Mode = "Toggle", Text = "Thirdperson", NoUI = false })
-VisualsView:AddToggle("VV_ThirdpersonCamCollision", { Text = "Wall Detect", Default = false, Tooltip = "Makes the camera position on a detected wall if there are any, for the sake of visibility." })
-VisualsView:AddSlider("VV_ThirdpersonDistance", { Text = "Distance", Default = 10, Min = 5, Max = 30, Rounding = 0, Compact = true, Tooltip = "Camera distance for thirdperson." })
-VisualsView:AddSlider("VV_ThirdpersonOffset", { Text = "Offset", Default = 0, Min = -5, Max = 5, Rounding = 1, Compact = true, Tooltip = "Camera left/right offset for thirdperson." })
-VisualsView:AddSlider("VV_ThirdpersonOffsetUp", { Text = "Vertical Offset", Default = 0, Min = -5, Max = 5, Rounding = 1, Compact = true, Tooltip = "Camera up/down offset for thirdperson." })
+VisualsView:AddToggle("VV_Thirdperson", { Text = "Thirdperson", Default = false, Tooltip = "Changes camera visibility to view local character from the third person" }):AddKeyPicker("VV_Thirdperson_K", { Default = "V", SyncToggleState = false, Mode = "Toggle", Text = "Thirdperson", NoUI = false })
+VisualsView:AddToggle("VV_ThirdpersonCamCollision", { Text = "Wall Detect", Default = false, Tooltip = "Makes the camera position on a detected wall if there are any, for the sake of visibility" })
+VisualsView:AddSlider("VV_ThirdpersonDistance", { Text = "Distance", Default = 10, Min = 5, Max = 30, Rounding = 0, Compact = true, Tooltip = "Camera distance for thirdperson" })
+VisualsView:AddSlider("VV_ThirdpersonOffset", { Text = "Offset", Default = 0, Min = -5, Max = 5, Rounding = 1, Compact = true, Tooltip = "Camera left/right offset for thirdperson" })
+VisualsView:AddSlider("VV_ThirdpersonOffsetUp", { Text = "Vertical Offset", Default = 0, Min = -5, Max = 5, Rounding = 1, Compact = true, Tooltip = "Camera up/down offset for thirdperson" })
 VisualsView:AddDivider()
 VisualsView:AddToggle("VV_ViewmodelOffset", { Text = "Viewmodel Offset", Default = false, Tooltip = "Modifier for character viewmodel when holding tools." })
 VisualsView:AddSlider("VV_ViewmodelOffset_X", { Text = "X", Default = 0, Min = -5, Max = 5, Rounding = 1, Compact = true, })
@@ -261,34 +271,31 @@ VisualsView:AddSlider("VV_ViewmodelOffset_Z", { Text = "Z", Default = 0, Min = -
 local VisualsWorld = Tabs.Visuals:AddRightGroupbox("World")
 VisualsWorld:AddToggle("VW_Ambience", { Text = "Ambience", Default = false, Tooltip = "Changes color of the map." }):AddColorPicker("VW_Ambience_C", { Default = Color3.new(1, 1, 1), Title = "Ambience Color" })
 VisualsWorld:AddToggle("VW_NoFog", { Text = "Remove Fog", Default = false, Tooltip = "Removes map fog if available." })
-VisualsWorld:AddDivider()
-VisualsWorld:AddToggle("VW_RushNodes", {Text = "Show Rush Nodes", Tooltip = "Shows the path Rush and Ambush will take when moving."})
+
 
 local VisualsRemovals = Tabs.Visuals:AddLeftGroupbox("Removals")
-VisualsRemovals:AddToggle("VR_NoHasteEffect", { Text = "No Haste Effects", Default = false, Tooltip = "Removes vignette and red color correction effect when haste spawns." })
-VisualsRemovals:AddToggle("VR_NoHidingVignette", { Text = "No Hiding Vignette", Default = false, Tooltip = "Removes screen vignette when hiding." })
-VisualsRemovals:AddToggle("VR_NoHaltEffect", { Text = "No Halt Effects", Default = false, Tooltip = "Removes flashing effects during halt room." })
-VisualsRemovals:AddToggle("VR_NoReviveCutscene", { Text = "No Revive Cutscene", Default = false, Tooltip = "Removes the heart cutscene when reviving." })
+VisualsRemovals:AddToggle("VR_NoHasteEffect", { Text = "No Haste Effects", Default = false, Tooltip = "Removes vignette and red color correction effect when haste spawns" })
+VisualsRemovals:AddToggle("VR_NoHidingVignette", { Text = "No Hiding Vignette", Default = false, Tooltip = "Removes screen vignette when hiding" })
+VisualsRemovals:AddToggle("VR_NoHaltEffect", { Text = "No Halt Effects", Default = false, Tooltip = "Removes flashing effects during halt room" })
+VisualsRemovals:AddToggle("VR_NoReviveCutscene", { Text = "No Revive Cutscene", Default = false, Tooltip = "Removes the heart cutscene when reviving" })
 VisualsRemovals:AddDivider()
-VisualsRemovals:AddToggle("VR_TimothyJumpscare", { Text = "Remove Timothy Jumpscare", Default = false, Tooltip = "Removes the jumpscare upon timothy spawning." })
-VisualsRemovals:AddToggle("VR_NoGlitchJumpscare", { Text = "Remove Glitch Jumpscare", Default = false, Tooltip = "Removes the client sided glitch jumpscare." })
-VisualsRemovals:AddToggle("VR_NoVoidEffect", { Text = "Remove Void Jumpscare", Default = false, Tooltip = "Removes the client sided void effect." })
-VisualsRemovals:AddToggle("VR_NoSeekEffects", { Text = "Remove Seek Room Effects", Default = false, Tooltip = "Removes the client sided seek eyes and texture effects during the teasing and chase." })
+VisualsRemovals:AddToggle("VR_TimothyJumpscare", { Text = "Remove Timothy Jumpscare", Default = false, Tooltip = "Removes the jumpscare upon timothy spawning" })
+VisualsRemovals:AddToggle("VR_NoGlitchJumpscare", { Text = "Remove Glitch Jumpscare", Default = false, Tooltip = "Removes the client sided glitch jumpscare" })
+VisualsRemovals:AddToggle("VR_NoVoidEffect", { Text = "Remove Void Jumpscare", Default = false, Tooltip = "Removes the client sided void effect" })
+VisualsRemovals:AddToggle("VR_NoSeekEffects", { Text = "Remove Seek Room Effects", Default = false, Tooltip = "Removes the seek eyes and texture effects during the teasing and chase" })
 
 
 
 local MiscAudio = Tabs.Misc:AddRightGroupbox("Audio")
-MiscAudio:AddToggle("MA_SilentJammin", { Text = "Silent Jammin Modifier", Default = false, Tooltip = "Removes the jeffs shop jammin modifier music." })
+MiscAudio:AddToggle("MA_SilentJammin", { Text = "Silent Jammin Modifier", Default = false, Tooltip = "Removes the jeffs shop jammin modifier music" })
 MiscAudio:AddDivider()
-MiscAudio:AddToggle("MA_NoHasteSound", { Text = "No Haste Sounds", Default = false, Tooltip = "Mutes the extremely obnoxious ambience when haste spawns." })
-MiscAudio:AddToggle("MA_SilentInteracting", { Text = "No Interacting Sound", Default = false, Tooltip = "Mutes sound when interacting with a prompt." })
-MiscAudio:AddToggle("MA_NoRandomAmbience", { Text = "No Random Ambience", Default = false, Tooltip = "Removes any random noise ambience that may occur." })
-MiscAudio:AddToggle("MA_SilentGloombat", { Text = "Silent Gloombats", Default = false, Tooltip = "Makes any gloombat flying and roaring silent, due to it potentially triggering or heavily bothering some people." })
+MiscAudio:AddToggle("MA_NoHasteSound", { Text = "No Haste Sounds", Default = false, Tooltip = "Mutes the extremely obnoxious ambience when haste spawns" })
+MiscAudio:AddToggle("MA_SilentInteracting", { Text = "No Interacting Sound", Default = false, Tooltip = "Mutes sound when interacting with a prompt" })
+MiscAudio:AddToggle("MA_NoRandomAmbience", { Text = "No Random Ambience", Default = false, Tooltip = "Removes any random noise ambience that may occur" })
+MiscAudio:AddToggle("MA_SilentGloombat", { Text = "Silent Gloombats", Default = false, Tooltip = "Makes any gloombat flying and roaring silent" })
 --MiscAudio:AddToggle("MA_NoFigureFootsteps", { Text = "Silent Figure Steps", Default = false, Tooltip = "Removes figure footsteps." })
 
 local MiscellaneousOther = Tabs.Misc:AddRightGroupbox("Extra")
-MiscellaneousOther:AddToggle("MO_antirobloxvoid", { Text = "No Roblox Void", Default = false, Tooltip = "Removes the ROBLOX fallen parts destroy height." })
-MiscellaneousOther:AddDivider()
 MiscellaneousOther:AddButton("Play Again", function()
     game.ReplicatedStorage.RemotesFolder.PlayAgain:FireServer()
 end)
@@ -1183,17 +1190,6 @@ local Connections = {
 			end
 		end
 
-        if Toggles.GA_EatCandies.Value and Options.GA_EatCandies_K:GetState() then
-            local Candy = LocalPlayer.Backpack:FindFirstChild("Candy")
-
-            if Candy and Candy:FindFirstChild("Remote") and not Candy:FindFirstChild("Meshes/DOORS_EvilCandy_Cube", true) then
-                Candy.Parent = LocalPlayer.Character
-			end
-
-            if LocalPlayer.Character:FindFirstChild("Candy") and LocalPlayer.Character.Candy:FindFirstChild("Remote") and not LocalPlayer.Character.Candy:FindFirstChild("Meshes/DOORS_EvilCandy_Cube", true) then
-				LocalPlayer.Character.Candy.Remote:FireServer()
-			end
-		end
 
         if not LocalPlayer.Character:GetAttribute("Hiding") then
             if workspace:FindFirstChild("Eyes") and Toggles.ES_AntiEyes.Value then
@@ -1214,41 +1210,6 @@ local Connections = {
             end
         end
 
-        if Toggles.GA_MinecartInteract.Value and Options.GA_MinecartInteract_K:GetState() then
-            local CurrentRoom = Rooms[ LocalPlayer:GetAttribute("CurrentRoom") ]
-
-            if CurrentRoom.Assets:FindFirstChild("MinecartSet") then
-                for _, Minecart in CurrentRoom.Assets.MinecartSet:GetChildren() do
-                    if Minecart:FindFirstChild("Cart") then
-                        if (LocalPlayer.Character.Collision.Position - Minecart.Main.Position).Magnitude < Minecart.Cart.PushPrompt.MaxActivationDistance * 2 then
-                            fireproximityprompt(Minecart.Cart.PushPrompt)
-                        end
-                    end
-                end
-            end
-            if CurrentRoom.Assets:FindFirstChild("MinecartTracks") then
-                for _, Track in CurrentRoom.Assets.MinecartTracks:GetChildren() do
-                    for _, MinecartMoving in Track.MinecartSet:GetChildren() do
-                        if MinecartMoving.Name == "MinecartMoving" then
-                            if (LocalPlayer.Character.Collision.Position - MinecartMoving.Main.Position).Magnitude < MinecartMoving.Cart.PushPrompt.MaxActivationDistance * 2 then
-                                fireproximityprompt(MinecartMoving.Cart.PushPrompt)
-                            end
-                        end
-                    end
-                end
-            end
-            for _, Sideroom in CurrentRoom:GetChildren() do
-                if Sideroom.Name == "Sideroom" and Sideroom.Assets:FindFirstChild("MinecartSet") then
-                    for _, Minecart in Sideroom.Assets.MinecartSet:GetChildren() do
-                        if Minecart:FindFirstChild("Cart") then
-                            if (LocalPlayer.Character.Collision.Position - Minecart.Main.Position).Magnitude < Minecart.Cart.PushPrompt.MaxActivationDistance * 2 then
-                                fireproximityprompt(Minecart.Cart.PushPrompt)
-                            end
-                        end
-                    end
-                end
-            end
-        end
 
         if Toggles.GA_AutoInteract.Value and Options.GA_AutoInteract_K:GetState() then
             local CurrentRoom = Rooms[ LocalPlayer:GetAttribute("CurrentRoom") ]
@@ -2344,8 +2305,6 @@ local Connections = {
                 v.Egg.CanTouch = not Toggles.ES_AntiGloombat.Value
             end
 
-        elseif v.Parent and v.Parent.Name == "PathfindNodes" then
-            v.Transparency = Toggles.VW_RushNodes.Value and 0 or 1
         end
 
     end),
@@ -3375,15 +3334,7 @@ Toggles.VW_NoFog:OnChanged(function()
     end
 end)
 
-Toggles.VW_RushNodes:OnChanged(function()
-    for _, Room in Rooms:GetChildren() do
-        if Room:FindFirstChild("PathfindNodes") then
-            for _, Node in Room.PathfindNodes:GetChildren() do
-                Node.Transparency = Toggles.VW_RushNodes.Value and 0 or 1
-            end
-        end
-    end
-end)
+
 
 Toggles.VR_NoHasteEffect:OnChanged(function()
     for _,v in workspace.CurrentCamera:GetChildren() do
@@ -3558,7 +3509,7 @@ task.spawn(function()
         end
 
         print("[BloxstrapRPC] {\"command\": \"SetRichPresence\", \"data\": " .. game:GetService("HttpService"):JSONEncode({
-            details = Bool and "[ Playing DOORS ] Nexam" or "<reset>",
+            details = Bool and "[ Playing DOORS 👁️ ] Nexam" or "<reset>",
             state = Bool and State or "<reset>",
             largeImage = Bool and LargeImage or { reset = true },
             smallImage = Bool and { assetId = 135488783479977, hoverText = "Nexam Hub | Doors" } or { reset = true }
@@ -3636,5 +3587,523 @@ task.spawn(function()
     end)
 
     ErrorMessageOut:Disconnect()
-    Notify("Load successful.", "Loading finished in ".. string.format("%.2f", tick() - Loadtime) .." seconds.", 10 / 3, true)
 end)
+end
+
+
+
+
+
+local G2L = {};
+
+-- StarterGui.ScreenGui
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+
+-- StarterGui.ScreenGui.Frame
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(32, 35, 41);
+G2L["2"]["Size"] = UDim2.new(0, 551, 0, 324);
+G2L["2"]["Position"] = UDim2.new(0.44974, 0, 0.23869, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.ScreenGui.Frame.UICorner
+G2L["3"] = Instance.new("UICorner", G2L["2"]);
+
+
+
+-- StarterGui.ScreenGui.Frame.UIStroke
+G2L["4"] = Instance.new("UIStroke", G2L["2"]);
+G2L["4"]["Thickness"] = 2;
+G2L["4"]["Color"] = Color3.fromRGB(61, 61, 75);
+
+
+-- StarterGui.ScreenGui.Frame.Frame
+G2L["5"] = Instance.new("Frame", G2L["2"]);
+G2L["5"]["BorderSizePixel"] = 0;
+G2L["5"]["BackgroundColor3"] = Color3.fromRGB(47, 51, 60);
+G2L["5"]["Size"] = UDim2.new(0, 131, 0, 324);
+G2L["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.ScreenGui.Frame.Frame.UICorner
+G2L["6"] = Instance.new("UICorner", G2L["5"]);
+
+
+
+-- StarterGui.ScreenGui.Frame.Frame
+G2L["7"] = Instance.new("Frame", G2L["2"]);
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(47, 51, 60);
+G2L["7"]["Size"] = UDim2.new(0, 100, 0, 324);
+G2L["7"]["Position"] = UDim2.new(0.05626, 0, 0, 0);
+G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.ScreenGui.Frame.Frame.TextLabel
+G2L["8"] = Instance.new("TextLabel", G2L["7"]);
+G2L["8"]["BorderSizePixel"] = 0;
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8"]["TextSize"] = 20;
+G2L["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["8"]["TextColor3"] = Color3.fromRGB(195, 203, 208);
+G2L["8"]["BackgroundTransparency"] = 1;
+G2L["8"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8"]["Text"] = [[Nexam Hub]];
+G2L["8"]["Position"] = UDim2.new(-0.66352, 0, -0.01852, 0);
+
+
+-- StarterGui.ScreenGui.Frame.Frame.TextButton
+G2L["9"] = Instance.new("TextButton", G2L["7"]);
+G2L["9"]["BorderSizePixel"] = 0;
+G2L["9"]["TextSize"] = 19;
+G2L["9"]["TextColor3"] = Color3.fromRGB(195, 203, 208);
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(67, 71, 81);
+G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["9"]["Size"] = UDim2.new(0, 111, 0, 31);
+G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["Text"] = [[Key]];
+G2L["9"]["Position"] = UDim2.new(-0.21, 0, 0.1358, 0);
+
+
+-- StarterGui.ScreenGui.Frame.Frame.TextButton.UICorner
+G2L["a"] = Instance.new("UICorner", G2L["9"]);
+
+
+
+-- StarterGui.ScreenGui.Frame.Frame.TextButton.ImageLabel
+G2L["b"] = Instance.new("ImageLabel", G2L["9"]);
+G2L["b"]["BorderSizePixel"] = 0;
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b"]["Image"] = [[rbxassetid://91809027533025]];
+G2L["b"]["Size"] = UDim2.new(0, 20, 0, 20);
+G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b"]["BackgroundTransparency"] = 1;
+G2L["b"]["Position"] = UDim2.new(0.06306, 0, 0.16129, 0);
+
+
+-- StarterGui.ScreenGui.Frame.Frame.TextButton.LocalScript
+G2L["c"] = Instance.new("LocalScript", G2L["9"]);
+
+
+
+-- StarterGui.ScreenGui.Frame.Frame.TextLabel
+G2L["d"] = Instance.new("TextLabel", G2L["7"]);
+G2L["d"]["BorderSizePixel"] = 0;
+G2L["d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d"]["TextSize"] = 20;
+G2L["d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["d"]["TextColor3"] = Color3.fromRGB(195, 203, 208);
+G2L["d"]["BackgroundTransparency"] = 1;
+G2L["d"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d"]["Text"] = [[Account]];
+G2L["d"]["Position"] = UDim2.new(0.46648, 0, 0, 0);
+
+
+-- StarterGui.ScreenGui.Frame.LocalScript
+G2L["e"] = Instance.new("LocalScript", G2L["2"]);
+
+
+
+-- StarterGui.ScreenGui.Frame.Frame
+G2L["f"] = Instance.new("Frame", G2L["2"]);
+G2L["f"]["BorderSizePixel"] = 0;
+G2L["f"]["BackgroundColor3"] = Color3.fromRGB(43, 46, 53);
+G2L["f"]["Size"] = UDim2.new(0, 364, 0, 104);
+G2L["f"]["Position"] = UDim2.new(0.28494, 0, 0.1358, 0);
+G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.ScreenGui.Frame.Frame.UICorner
+G2L["10"] = Instance.new("UICorner", G2L["f"]);
+
+
+
+-- StarterGui.ScreenGui.Frame.Frame.UIStroke
+G2L["11"] = Instance.new("UIStroke", G2L["f"]);
+G2L["11"]["Thickness"] = 2;
+G2L["11"]["Color"] = Color3.fromRGB(61, 61, 75);
+
+
+-- StarterGui.ScreenGui.Frame.Frame.TextButton
+G2L["12"] = Instance.new("TextButton", G2L["f"]);
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["TextSize"] = 14;
+G2L["12"]["TextColor3"] = Color3.fromRGB(195, 203, 208);
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(54, 57, 63);
+G2L["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["12"]["Size"] = UDim2.new(0, 66, 0, 30);
+G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12"]["Text"] = [[Confirm]];
+G2L["12"]["Position"] = UDim2.new(0.78571, 0, 0.53846, 0);
+
+
+-- StarterGui.ScreenGui.Frame.Frame.TextButton.UICorner
+G2L["13"] = Instance.new("UICorner", G2L["12"]);
+
+
+
+-- StarterGui.ScreenGui.Frame.Frame.TextButton.LocalScript
+G2L["14"] = Instance.new("LocalScript", G2L["12"]);
+
+
+
+-- StarterGui.ScreenGui.Frame.A
+G2L["15"] = Instance.new("Frame", G2L["2"]);
+G2L["15"]["BorderSizePixel"] = 0;
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(54, 57, 63);
+G2L["15"]["Size"] = UDim2.new(0, 256, 0, 30);
+G2L["15"]["Position"] = UDim2.new(0.32305, 0, 0.30864, 0);
+G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["Name"] = [[A]];
+
+
+-- StarterGui.ScreenGui.Frame.A.UICorner
+G2L["16"] = Instance.new("UICorner", G2L["15"]);
+
+
+
+-- StarterGui.ScreenGui.Frame.A.UIStroke
+G2L["17"] = Instance.new("UIStroke", G2L["15"]);
+G2L["17"]["Thickness"] = 2;
+G2L["17"]["Color"] = Color3.fromRGB(64, 67, 73);
+
+
+-- StarterGui.ScreenGui.Frame.A.TextBox
+G2L["18"] = Instance.new("TextBox", G2L["15"]);
+G2L["18"]["TextColor3"] = Color3.fromRGB(179, 179, 179);
+G2L["18"]["PlaceholderColor3"] = Color3.fromRGB(179, 179, 179);
+G2L["18"]["BorderSizePixel"] = 2;
+G2L["18"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["18"]["TextSize"] = 14;
+G2L["18"]["BackgroundColor3"] = Color3.fromRGB(54, 57, 63);
+G2L["18"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["18"]["PlaceholderText"] = [[Enter Your Key]];
+G2L["18"]["Size"] = UDim2.new(0, 236, 0, 21);
+G2L["18"]["Position"] = UDim2.new(0.04208, 0, 0.12099, 0);
+G2L["18"]["BorderColor3"] = Color3.fromRGB(61, 61, 75);
+G2L["18"]["Text"] = [[]];
+
+
+-- StarterGui.ScreenGui.Frame.A.TextBox.UICorner
+G2L["19"] = Instance.new("UICorner", G2L["18"]);
+
+
+
+-- StarterGui.ScreenGui.Frame.B
+G2L["1a"] = Instance.new("Frame", G2L["2"]);
+G2L["1a"]["BorderSizePixel"] = 0;
+G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 75);
+G2L["1a"]["Size"] = UDim2.new(0, 2, 0, 324);
+G2L["1a"]["Position"] = UDim2.new(0.23761, 0, -0.00205, 0);
+G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1a"]["Name"] = [[B]];
+
+
+-- StarterGui.ScreenGui.Frame.B.TextLabel
+G2L["1b"] = Instance.new("TextLabel", G2L["1a"]);
+G2L["1b"]["BorderSizePixel"] = 0;
+G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1b"]["TextSize"] = 20;
+G2L["1b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["1b"]["TextColor3"] = Color3.fromRGB(195, 203, 208);
+G2L["1b"]["BackgroundTransparency"] = 1;
+G2L["1b"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["1b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1b"]["Text"] = [[License Key]];
+G2L["1b"]["Position"] = UDim2.new(-10.03351, 0, 0.10494, 0);
+
+
+-- StarterGui.ScreenGui.Frame.B.C
+G2L["1c"] = Instance.new("TextLabel", G2L["1a"]);
+G2L["1c"]["BorderSizePixel"] = 0;
+G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1c"]["TextSize"] = 16;
+G2L["1c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1c"]["TextColor3"] = Color3.fromRGB(195, 203, 208);
+G2L["1c"]["BackgroundTransparency"] = 1;
+G2L["1c"]["Size"] = UDim2.new(0, 210, 0, 50);
+G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1c"]["Text"] = [[You currently have no active keys.]];
+G2L["1c"]["Name"] = [[C]];
+G2L["1c"]["Position"] = UDim2.new(16.82391, 0, 0.16358, 0);
+
+
+-- StarterGui.ScreenGui.Frame.Frame
+G2L["1d"] = Instance.new("Frame", G2L["2"]);
+G2L["1d"]["BorderSizePixel"] = 0;
+G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 75);
+G2L["1d"]["Size"] = UDim2.new(0, 132, 0, 2);
+G2L["1d"]["Position"] = UDim2.new(0, 0, 0.83951, 0);
+G2L["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.ScreenGui.Frame.TextLabel
+G2L["1e"] = Instance.new("TextLabel", G2L["2"]);
+G2L["1e"]["BorderSizePixel"] = 0;
+G2L["1e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1e"]["TextSize"] = 14;
+G2L["1e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1e"]["TextColor3"] = Color3.fromRGB(195, 203, 208);
+G2L["1e"]["BackgroundTransparency"] = 1;
+G2L["1e"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1e"]["Text"] = [[XXXXXXXXXXXXXXXXXXXX]];
+G2L["1e"]["Position"] = UDim2.new(0.01639, 0, 0.83951, 0);
+
+
+-- StarterGui.ScreenGui.Frame.TextLabel.LocalScript
+G2L["1f"] = Instance.new("LocalScript", G2L["1e"]);
+
+
+
+-- StarterGui.ScreenGui.Frame.Frame
+G2L["20"] = Instance.new("Frame", G2L["2"]);
+G2L["20"]["BorderSizePixel"] = 0;
+G2L["20"]["BackgroundColor3"] = Color3.fromRGB(43, 46, 53);
+G2L["20"]["Size"] = UDim2.new(0, 364, 0, 104);
+G2L["20"]["Position"] = UDim2.new(0.28494, 0, 0.48148, 0);
+G2L["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.ScreenGui.Frame.Frame.UICorner
+G2L["21"] = Instance.new("UICorner", G2L["20"]);
+
+
+
+-- StarterGui.ScreenGui.Frame.Frame.UIStroke
+G2L["22"] = Instance.new("UIStroke", G2L["20"]);
+G2L["22"]["Thickness"] = 2;
+G2L["22"]["Color"] = Color3.fromRGB(61, 61, 75);
+
+
+-- StarterGui.ScreenGui.Frame.Frame.TextButton
+G2L["23"] = Instance.new("TextButton", G2L["20"]);
+G2L["23"]["BorderSizePixel"] = 0;
+G2L["23"]["TextSize"] = 14;
+G2L["23"]["TextColor3"] = Color3.fromRGB(195, 203, 208);
+G2L["23"]["BackgroundColor3"] = Color3.fromRGB(54, 57, 63);
+G2L["23"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["23"]["Size"] = UDim2.new(0, 141, 0, 30);
+G2L["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["23"]["Text"] = [[Join ]];
+G2L["23"]["Position"] = UDim2.new(0.30495, 0, 0.57692, 0);
+
+
+-- StarterGui.ScreenGui.Frame.Frame.TextButton.UICorner
+G2L["24"] = Instance.new("UICorner", G2L["23"]);
+
+
+
+-- StarterGui.ScreenGui.Frame.Frame.TextButton.LocalScript
+G2L["25"] = Instance.new("LocalScript", G2L["23"]);
+
+
+
+-- StarterGui.ScreenGui.Frame.Frame.TextLabel
+G2L["26"] = Instance.new("TextLabel", G2L["20"]);
+G2L["26"]["BorderSizePixel"] = 0;
+G2L["26"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["26"]["TextSize"] = 20;
+G2L["26"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["26"]["TextColor3"] = Color3.fromRGB(195, 203, 208);
+G2L["26"]["BackgroundTransparency"] = 1;
+G2L["26"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["26"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["26"]["Text"] = [[Discord]];
+G2L["26"]["Position"] = UDim2.new(-0.12781, 0, -0.08583, 0);
+
+
+-- StarterGui.ScreenGui.Frame.Frame.TextLabel
+G2L["27"] = Instance.new("TextLabel", G2L["20"]);
+G2L["27"]["BorderSizePixel"] = 0;
+G2L["27"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["27"]["TextSize"] = 16;
+G2L["27"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["27"]["TextColor3"] = Color3.fromRGB(195, 203, 208);
+G2L["27"]["BackgroundTransparency"] = 1;
+G2L["27"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["27"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["27"]["Text"] = [[To get the Key, Join the Discord.]];
+G2L["27"]["Position"] = UDim2.new(0.05626, 0, 0.08725, 0);
+
+
+-- StarterGui.ScreenGui.Frame.TextLabel
+G2L["28"] = Instance.new("TextLabel", G2L["2"]);
+G2L["28"]["BorderSizePixel"] = 0;
+G2L["28"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["28"]["TextSize"] = 16;
+G2L["28"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["28"]["TextColor3"] = Color3.fromRGB(195, 203, 208);
+G2L["28"]["BackgroundTransparency"] = 1;
+G2L["28"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["28"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["28"]["Text"] = [[Nexam Hub | dsc.gg/Nexam]];
+G2L["28"]["Position"] = UDim2.new(0.2196, 0, 0.88046, 0);
+
+
+-- StarterGui.ScreenGui.Frame.ImageButton
+G2L["29"] = Instance.new("ImageButton", G2L["2"]);
+G2L["29"]["BorderSizePixel"] = 0;
+G2L["29"]["BackgroundColor3"] = Color3.fromRGB(32, 35, 41);
+G2L["29"]["Image"] = [[rbxassetid://100949367799602]];
+G2L["29"]["Size"] = UDim2.new(0, 25, 0, 25);
+G2L["29"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["29"]["Position"] = UDim2.new(0.94555, 0, 0.01852, 0);
+
+
+-- StarterGui.ScreenGui.Frame.ImageButton.UICorner
+G2L["2a"] = Instance.new("UICorner", G2L["29"]);
+
+
+
+-- StarterGui.ScreenGui.Frame.ImageButton.LocalScript
+G2L["2b"] = Instance.new("LocalScript", G2L["29"]);
+
+
+
+-- StarterGui.ScreenGui.LocalScript
+G2L["2c"] = Instance.new("LocalScript", G2L["1"]);
+
+
+
+-- StarterGui.ScreenGui.Frame.Frame.TextButton.LocalScript
+local function C_c()
+local script = G2L["c"];
+	local button = script.Parent
+	local baseColor = Color3.fromRGB(66, 70, 80)
+	
+	button.BackgroundColor3 = baseColor
+	button.AutoButtonColor = false -- prevent hover effects from Roblox
+	button.TextColor3 = Color3.fromRGB(255, 255, 255) -- set to white or preferred
+	button.TextTransparency = 0 -- ensure it's fully visible
+	button.ZIndex = 2
+	
+	local gradient = Instance.new("UIGradient")
+	gradient.Enabled = false
+	gradient.Color = ColorSequence.new{
+		ColorSequenceKeypoint.new(0.00, Color3.fromRGB(80, 180, 255)),
+		ColorSequenceKeypoint.new(0.50, Color3.fromRGB(40, 130, 255)),
+		ColorSequenceKeypoint.new(1.00, Color3.fromRGB(80, 180, 255))
+	}
+	gradient.Rotation = 0
+	gradient.Parent = button
+	
+	local hovered = false
+	local offset = 0
+	
+	task.spawn(function()
+		while true do
+			if hovered then
+				offset += 0.01
+				if offset > 1 then offset = 0 end
+				gradient.Offset = Vector2.new(offset, 0)
+			end
+			task.wait(0.03)
+		end
+	end)
+	
+	button.MouseEnter:Connect(function()
+		hovered = true
+		gradient.Enabled = true
+	end)
+	
+	button.MouseLeave:Connect(function()
+		hovered = false
+		gradient.Enabled = false
+		button.BackgroundColor3 = baseColor
+	end)
+	
+end;
+task.spawn(C_c);
+-- StarterGui.ScreenGui.Frame.LocalScript
+local function C_e()
+local script = G2L["e"];
+	script.Parent.Draggable = true
+	script.Parent.Active = true
+end;
+task.spawn(C_e);
+-- StarterGui.ScreenGui.Frame.Frame.TextButton.LocalScript
+local function C_14()
+local script = G2L["14"];
+	local text = script.Parent.Parent.Parent.A.TextBox
+	local button = script.Parent
+	local othertext = script.Parent.Parent.Parent.B.C
+	
+	button.MouseButton1Click:Connect(function ()
+		if text.Text == "Nexam-Hub-2025.me" then
+			othertext.Text = "You currently have an active license."
+            loadUI()
+		else
+			game.StarterGui:SetCore("SendNotification", {
+				Title = "Nexam",
+				Text = "Incorrect key!",
+				Duration = 4,
+				Icon = "rbxassetid://135488783479977" -- Replace with any Roblox image ID
+			})
+		end
+	end)
+end;
+task.spawn(C_14);
+-- StarterGui.ScreenGui.Frame.TextLabel.LocalScript
+local function C_1f()
+local script = G2L["1f"];
+	local player = game.Players.LocalPlayer.Name
+	local text = script.Parent
+	
+	text.Text = player
+	
+end;
+task.spawn(C_1f);
+-- StarterGui.ScreenGui.Frame.Frame.TextButton.LocalScript
+local function C_25()
+local script = G2L["25"];
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		setclipboard("discord.gg/GZQK6Ec8c4")
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Nexam",
+			Text = "Copied to clipboard",
+			Duration = 4,
+			Icon = "rbxassetid://135488783479977" -- Replace with any Roblox image ID
+		})
+	end)
+	
+end;
+task.spawn(C_25);
+-- StarterGui.ScreenGui.Frame.ImageButton.LocalScript
+local function C_2b()
+local script = G2L["2b"];
+	local gui = script.Parent.Parent.Parent
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function ()
+		gui:Destroy()
+	end)
+end;
+task.spawn(C_2b);
+-- StarterGui.ScreenGui.LocalScript
+local function C_2c()
+local script = G2L["2c"];
+	local gui = script.Parent
+	
+	-- Attempt to reparent to CoreGui
+	local success, err = pcall(function()
+		gui.Parent = game:GetService("CoreGui")
+	end)
+	
+	if not success then
+		warn("Failed to parent to CoreGui:", err)
+	end
+	
+end;
+task.spawn(C_2c);
+
+return G2L["1"], require;
